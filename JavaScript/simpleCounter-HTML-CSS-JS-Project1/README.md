@@ -56,7 +56,7 @@ Through this project, I practiced:
 
 ## 📸 Preview
 
-![Simple Counter Preview](simpleCounter-HTML-CSS-JS-Project1/simpleCounter-HTML-CSS-JS-Project1.png)
+![Simple Counter Preview](./simpleCounter-HTML-CSS-JS-Project1.png)
 
 ## 🚀 Project Status
 
