@@ -60,9 +60,11 @@ Through this project, I practiced:
 
 ## 📸 Preview
 
-![Leon Project Preview](./screenshots-preview/leon-HTML-CSS-Project1_1.png)
-![Leon Project Preview](./screenshots-preview/leon-HTML-CSS-Project1_2.png)
-![Leon Project Preview](./screenshots-preview/leon-HTML-CSS-Project1_3.png)
+![Leon Project Preview](./screenshots-preview/Leon-HTML-CSS-Project1_1.png)
+
+![Leon Project Preview](./screenshots-preview/Leon-HTML-CSS-Project1_2.png)
+
+![Leon Project Preview](./screenshots-preview/Leon-HTML-CSS-Project1_3.png)
 
 
 ## 🚀 Project Status
