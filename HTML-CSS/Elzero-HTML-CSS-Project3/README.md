@@ -72,7 +72,11 @@ Through this project, I practiced:
 
 ## 📸 Preview
 
-![Elzero Project Preview](images/landing.jpg)
+![Elzero Project Preview](HTML-CSS/Elzero-HTML-CSS-Project3/screenshots-preview/Elzero-HTML-CSS-Project3_1.png)
+![Elzero Project Preview](HTML-CSS/Elzero-HTML-CSS-Project3/screenshots-preview/Elzero-HTML-CSS-Project3_2.png)
+![Elzero Project Preview](HTML-CSS/Elzero-HTML-CSS-Project3/screenshots-preview/Elzero-HTML-CSS-Project3_3.png)
+
+
 
 ## 🚀 Project Status
 
