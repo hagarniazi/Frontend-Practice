@@ -70,9 +70,11 @@ Through this project, I practiced:
 
 ## 📸 Preview
 
-![Elzero Project Preview](./screenshots-preview/Kasper-HTML-CSS-Project2_1.png)
-![Elzero Project Preview](./screenshots-preview/Kasper-HTML-CSS-Project2_2.png)
-![Elzero Project Preview](./screenshots-preview/Kasper-HTML-CSS-Project2_3.png)
+![Kasper Project Preview](./screenshots-preview/Kasper-HTML-CSS-Project2_1.png)
+
+![Kasper Project Preview](./screenshots-preview/Kasper-HTML-CSS-Project2_2.png)
+
+![Kasper Project Preview](./screenshots-preview/Kasper-HTML-CSS-Project2_3.png)
 
 ## 🚀 Project Status
 
