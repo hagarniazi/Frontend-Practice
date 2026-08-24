@@ -1,37 +1,239 @@
             /* Global Rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
 
             /* Body */
-
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #121212;
+    color: #f5f5f5;
+}
 
             /* Header */
-
+header h1 {
+    font-size: 50px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+header p {
+    font-size: 30px;
+    color: #aaa;
+    text-align: center;
+}
 
             /* Main */
-
+main {
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    margin: 10px;
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
 
             /* Add Task */
-
+.add-task {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+#task-input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background: #252525;
+    color: #fff;
+    font-size: 16px;
+}
+#task-input::placeholder {
+    color: #888;
+}
+#task-input:focus {
+    outline: none;
+    border-color: #4a90d9;
+    box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.2);
+}
+#add-task {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4a90d9;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+#add-task:hover {
+    background-color: #0772e4;
+}
 
             /* Task Stats */
-
+.task-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.task-stats p {
+    font-size: 16px;
+    color: #aaa;
+    font-weight: 500;
+}
+.task-stats span {
+    font-weight: 700;
+    color: #4a90d9;
+    margin-left: 4px;
+}
+#clear-completed {
+    padding: 8px 14px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background: transparent;
+    color: #aaa;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+#clear-completed:hover {
+    background: #2a2a2a;
+    border-color: #666;
+}
 
             /* Filters */
-
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+.filters button {
+    padding: 6px 14px;
+    border: 1px solid #444;
+    border-radius: 20px;
+    background: transparent;
+    color: #aaa;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.filters button:hover {
+    background: #2a2a2a;
+    border-color: #666;
+}
+.filters button.active {
+    background: #4a90d9;
+    color: #fff;
+    border-color: #4a90d9;
+}
 
             /* Tasks */
+.tasks {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.task {
+    display: flex;
+    align-items: center;
+    padding: 12px 14px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background: #252525;
+    margin-bottom: 10px;
+    transition: background 0.2s ease;
+}
+.task:hover {
+    background: #2b2b2b;
+}
+.task span {
+    flex: 1;
+    font-size: 16px;
+    color: #eee;
+    line-height: 1.4;
+}
+.task input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+.task button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    font-size: 14px;
+    cursor: pointer;
+}
 
+            /* Edit Button */
+.task .edit {
+    color: #4a90d9;
+}
+.task .edit:hover {
+    background: #1d3045;
+}
 
-            /* Single Task */
+            /* Delete Button */
 
+.task .delete {
+    color: #d9534f;
+}
+.task .delete:hover {
+    background: #402525;
+}
 
             /* Completed Task */
-
-
-            /* Buttons */
-
+.task.completed span {
+    color: #777;
+    text-decoration: line-through;
+}
 
             /* Footer */
-
+footer {
+    margin-top: 30px;
+    padding: 15px;
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+}
 
             /* Responsive Design */
+@media (max-width: 480px) {
+    main {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+        border-radius: 0;
+    }
+    .add-task {
+        flex-direction: column;
+    }
+    #add-task {
+        width: 100%;
+    }
+    .filters {
+        flex-wrap: wrap;
+    }
+    .task-stats {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
