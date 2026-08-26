@@ -3,26 +3,40 @@
     <head>
         <meta charset="UTF-8">
         <title>E-Commerce</title>
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <input type="text" id="search-input" placeholder="Search products...">
-        <select id="category-filter">
-            <option value="all">All Categories</option>
-        </select>
-
-        <select id="sort-filter">
-            <option value="default">Sort By</option>
-            <option value="price-low">Price: Low to High</option>
-            <option value="price-high">Price: High to Low</option>
-        </select>
         
-        <div id="products-container"></div>
+        <body>
+            <nav class="navbar">
+                <h1>E-Commerce</h1>
 
-        <hr>
+                <div class="nav-links">
+                    <a href="wishlist.html">
+                        ❤️ Wishlist (<span id="wishlist-count">0</span>)
+                    </a>
 
-        <h1>Shopping Cart</h1>
-        <div id="cart-container"></div>
+                    <a href="cart.html">
+                        🛒 Cart (<span id="cart-count">0</span>)
+                    </a>
+                </div>
+            </nav>
 
+            <div class="filters">
+                <input type="text" id="search-input" placeholder="Search products...">
+
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                </select>
+
+                <select id="sort-filter">
+                    <option value="default">Sort By</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                </select>
+            </div>
+
+            <div id="products-container"></div>
 
         <script src="js/main.js"></script>
     </body>

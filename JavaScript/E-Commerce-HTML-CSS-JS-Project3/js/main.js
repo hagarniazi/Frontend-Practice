@@ -1,14 +1,28 @@
 const productsContainer = document.getElementById("products-container");
-const cartContainer = document.getElementById("cart-container");
 const searchInput = document.getElementById("search-input");
 const categoryFilter = document.getElementById("category-filter");
 const sortFilter = document.getElementById("sort-filter");
-
+const productDetails = document.getElementById("product-details");
+const wishlistCount = document.getElementById("wishlist-count");
+const cartCount = document.getElementById("cart-count");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 let products = [];
 
+function updateCounters() {
+    const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    wishlistCount.textContent = wishlist.length;
+
+    const cartItemsCount = cart.reduce((total, item) => {
+        return total + item.quantity;
+    }, 0);
+
+    cartCount.textContent = cartItemsCount;
+}
 
 function renderCart() {
     cartContainer.innerHTML = "";
@@ -70,6 +84,8 @@ function renderCart() {
         const totalElement = document.createElement("h2");
         totalElement.textContent = `Total: $${cartTotal}`;
         cartContainer.appendChild(totalElement);
+
+        updateCounters();
     
 }
 
@@ -100,6 +116,44 @@ function renderProducts(productsToRender) {
             addToCartButton.textContent = "Add to Cart";
             productCard.appendChild(addToCartButton);
 
+            const detailsButton = document.createElement("button");
+            detailsButton.textContent = "View Details";
+            productCard.appendChild(detailsButton);
+
+            detailsButton.addEventListener("click", () => {
+                window.location.href = `product-details.html?id=${product.id}`;
+            });
+
+            const wishlistButton = document.createElement("button");
+                wishlistButton.textContent = "♡ Wishlist";
+
+            let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+                const isInWishlist = wishlist.some((item) => item.id === product.id);
+
+                if (isInWishlist) {
+                    wishlistButton.textContent = "♥ Wishlist";
+                }
+
+                wishlistButton.addEventListener("click", () => {
+                    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+                    const existingProduct = wishlist.find((item) => item.id === product.id);
+
+                    if (existingProduct) {
+                        wishlist = wishlist.filter((item) => item.id !== product.id);
+                        wishlistButton.textContent = "♡ Wishlist";
+                    } else {
+                        wishlist.push(product);
+                        wishlistButton.textContent = "♥ Wishlist";
+                    }
+
+                    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+                    updateCounters();
+                });
+
+                productCard.appendChild(wishlistButton);
+
             addToCartButton.addEventListener("click", () => {
                 const existingProduct = cart.find((item) => item.product.id === product.id);
                     if (existingProduct) {
@@ -112,13 +166,50 @@ function renderProducts(productsToRender) {
                     }
                     localStorage.setItem("cart", JSON.stringify(cart));
 
-                    renderCart();
+                    updateCounters();
                     console.log(cart[0].quantity);
                 });
 
                 productsContainer.appendChild(productCard);
         });
     }
+
+function renderProductDetails(product) {
+    productDetails.innerHTML = "";
+
+    const detailsContainer = document.createElement("div");
+    detailsContainer.classList.add("product-details");
+
+    const image = document.createElement("img");
+    image.src = product.thumbnail;
+    detailsContainer.appendChild(image);
+
+    const title = document.createElement("h2");
+    title.textContent = product.title;
+    detailsContainer.appendChild(title);
+
+    const description = document.createElement("p");
+    description.textContent = product.description;
+    detailsContainer.appendChild(description);
+
+    const price = document.createElement("p");
+    price.textContent = `$${product.price}`;
+    detailsContainer.appendChild(price);
+
+    const rating = document.createElement("p");
+    rating.textContent = `⭐ ${product.rating}`;
+    detailsContainer.appendChild(rating);
+
+    const category = document.createElement("p");
+    category.textContent = `Category: ${product.category}`;
+    detailsContainer.appendChild(category);
+
+    const stock = document.createElement("p");
+    stock.textContent = `Stock: ${product.stock}`;
+    detailsContainer.appendChild(stock);
+
+    productDetails.appendChild(detailsContainer);
+}
 
 function updateProducts() {
     const searchTerm = searchInput.value.toLowerCase();
@@ -168,7 +259,7 @@ fetch("https://dummyjson.com/products")
 
         renderProducts(products);
 
-        renderCart();
+        updateCounters();
     });
 
 
