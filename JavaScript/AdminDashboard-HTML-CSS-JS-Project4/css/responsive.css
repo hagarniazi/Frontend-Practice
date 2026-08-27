@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+
+    aside {
+        width: 70px;
+    }
+
+    nav a span {
+        display: none;
+    }
+
+}
