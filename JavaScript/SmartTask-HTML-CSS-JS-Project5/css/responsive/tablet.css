@@ -33,11 +33,21 @@
 
     /* Quick Actions */
 
-    .quick-actions {
+        .quick-actions {
+            padding: var(--space-9) var(--space-5);
+        }
+
+        .actions-grid {
+            grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Final CTA */
+
+    .final-cta {
         padding: var(--space-9) var(--space-5);
     }
 
-    .actions-grid {
-        grid-template-columns: repeat(2, 1fr);
-}
+    .cta-content {
+        padding: var(--space-9) var(--space-6);
+    }
 }

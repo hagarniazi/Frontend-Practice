@@ -215,3 +215,45 @@
 .action-card .btn {
     margin-top: auto;
 }
+
+/* Final CTA */
+
+.final-cta {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: var(--space-10) var(--space-5);
+}
+
+.cta-content {
+    padding: var(--space-9) var(--space-6);
+
+    background-color: var(--color-primary);
+    border-radius: var(--radius-lg);
+
+    text-align: center;
+}
+
+.cta-content .section-label {
+    color: var(--color-surface);
+}
+
+.cta-content h2 {
+    margin-bottom: var(--space-4);
+    color: var(--color-surface);
+}
+
+.cta-content > p:not(.section-label) {
+    max-width: 600px;
+    margin: 0 auto var(--space-6);
+    color: var(--color-surface);
+    line-height: var(--line-height-relaxed);
+}
+
+.cta-content .btn-primary {
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+}
+
+.cta-content .btn-primary:hover {
+    background-color: var(--color-surface-secondary);
+}
