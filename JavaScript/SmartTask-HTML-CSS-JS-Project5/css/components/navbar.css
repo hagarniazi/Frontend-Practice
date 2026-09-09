@@ -45,3 +45,17 @@ nav ul a:focus-visible {
     outline-offset: 4px;
     border-radius: var(--radius-xs);
 }
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-text-primary);
+    font-size: 24px;
+}
+
+.menu-toggle:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+    border-radius: var(--radius-xs);
+}
