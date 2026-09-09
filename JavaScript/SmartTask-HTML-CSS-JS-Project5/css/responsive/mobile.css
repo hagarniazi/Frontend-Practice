@@ -87,4 +87,19 @@
     .stat-value {
         font-size: var(--font-size-h2);
     }
+
+    /* Quick Actions */
+
+    .quick-actions {
+        padding: var(--space-8) var(--space-4);
+    }
+
+    .actions-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .action-card {
+        padding: var(--space-5);
+    }
 }

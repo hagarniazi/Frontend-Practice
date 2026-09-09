@@ -30,4 +30,14 @@
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    /* Quick Actions */
+
+    .quick-actions {
+        padding: var(--space-9) var(--space-5);
+    }
+
+    .actions-grid {
+        grid-template-columns: repeat(2, 1fr);
+}
 }
