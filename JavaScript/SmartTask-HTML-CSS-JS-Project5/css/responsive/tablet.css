@@ -50,4 +50,48 @@
     .cta-content {
         padding: var(--space-9) var(--space-6);
     }
+
+    /* Dashboard Header - Tablet */
+
+    .dashboard-header {
+        padding: var(--space-9) var(--space-5);
+    }
+
+    .dashboard-header h1 {
+        font-size: var(--font-size-h1);
+    }
+
+    /* Summary Cards - Tablet */
+
+    .summary {
+        padding: var(--space-9) var(--space-5);
+    }
+
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .summary-card {
+        padding: var(--space-6);
+    }
+
+    /* Progress Overview - Tablet */
+
+    .progress-overview {
+        padding: var(--space-9) var(--space-5);
+    }
+
+    .progress-card {
+        padding: var(--space-6);
+    }
+
+    /* Recent Tasks - Tablet */
+
+    .recent-tasks {
+        padding: var(--space-9) var(--space-5);
+    }
+
+    .task-item {
+        padding: var(--space-5);
+    }
 }

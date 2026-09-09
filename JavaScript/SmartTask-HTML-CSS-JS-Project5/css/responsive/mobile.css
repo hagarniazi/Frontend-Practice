@@ -116,4 +116,112 @@
     .cta-content h2 {
         font-size: var(--font-size-h3);
     } 
+
+    /* Dashboard Header - Mobile */
+    .dashboard-header {
+    padding: var(--space-8) var(--space-4);
+
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-header h1 {
+        font-size: var(--font-size-h2);
+    }
+
+    .dashboard-header .btn {
+        width: 100%;
+    }
+
+    /* Summary Cards - Mobile */
+
+    .summary {
+        padding: var(--space-8) var(--space-4);
+    }
+
+    .summary .section-heading {
+        margin-bottom: var(--space-8);
+    }
+
+    .summary .section-heading h2 {
+        font-size: var(--font-size-h3);
+    }
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .summary-card {
+        padding: var(--space-5);
+    }
+
+    .summary-value {
+        font-size: var(--font-size-h2);
+    }
+
+    /* Progress Overview - Mobile */
+
+    .progress-overview {
+        padding: var(--space-8) var(--space-4);
+    }
+
+    .progress-overview .section-heading {
+        margin-bottom: var(--space-8);
+    }
+
+    .progress-overview .section-heading h2 {
+        font-size: var(--font-size-h3);
+    }
+
+    .progress-card {
+        padding: var(--space-5);
+    }
+
+    .progress-info {
+        margin-bottom: var(--space-4);
+    }
+
+    .progress-card progress {
+        height: 8px;
+    }
+
+    /* Recent Tasks - Mobile */
+
+    .recent-tasks {
+        padding: var(--space-8) var(--space-4);
+    }
+
+    .recent-tasks .section-heading {
+        margin-bottom: var(--space-8);
+    }
+
+    .recent-tasks .section-heading h2 {
+        font-size: var(--font-size-h3);
+    }
+
+    .task-item {
+        padding: var(--space-5);
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-4);
+    }
+
+    .task-info h3 {
+        font-size: var(--font-size-h4);
+    }
+
+    .task-status {
+        align-self: flex-start;
+    }
+
+    .recent-tasks-action {
+        justify-content: stretch;
+    }
+
+    .recent-tasks-action .btn {
+        width: 100%;
+    }
+
 }
