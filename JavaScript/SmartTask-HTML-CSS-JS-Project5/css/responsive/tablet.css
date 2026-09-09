@@ -1,0 +1,24 @@
+/* SmartTask - Tablet */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /* Hero */
+    
+    .hero {
+        padding: var(--space-10) var(--space-5);
+    }
+
+    .hero h1 {
+        font-size: var(--font-size-h1);
+    }
+
+    /* Features */
+    .features {
+        padding: var(--space-9) var(--space-5);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}

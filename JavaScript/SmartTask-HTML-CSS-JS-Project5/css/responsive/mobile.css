@@ -22,4 +22,50 @@
         width: 100%;
         margin-top: var(--space-4);
     }
+    
+    /* Hero */
+
+    .hero {
+        padding: var(--space-8) var(--space-4);
+    }
+
+    .hero h1 {
+        font-size: var(--font-size-h2);
+    }
+
+    .hero-description {
+        font-size: var(--font-size-body);
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    /* Features */
+
+    .features {
+        padding: var(--space-8) var(--space-4);
+    }
+
+    .section-heading {
+        margin-bottom: var(--space-6);
+    }
+
+    .section-heading h2 {
+        font-size: var(--font-size-h3);
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .feature-card {
+        padding: var(--space-5);
+    }
 }
