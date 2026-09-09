@@ -21,4 +21,13 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* Productivity Stats */
+
+    .productivity {
+        padding: var(--space-9) var(--space-5);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

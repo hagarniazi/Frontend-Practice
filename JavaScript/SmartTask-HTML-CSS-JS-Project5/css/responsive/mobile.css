@@ -68,4 +68,23 @@
     .feature-card {
         padding: var(--space-5);
     }
+
+    /* Productivity Stats */
+
+    .productivity {
+        padding: var(--space-8) var(--space-4);
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .stat-card {
+        padding: var(--space-5);
+    }
+
+    .stat-value {
+        font-size: var(--font-size-h2);
+    }
 }
