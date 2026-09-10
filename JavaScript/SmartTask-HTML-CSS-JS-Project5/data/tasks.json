@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Complete JavaScript Course",
+        "status": "in-progress",
+        "description": "Finish the remaining lessons and review the exercises."
+    },
+    {
+        "title": "Update Portfolio",
+        "status": "completed",
+        "description": "Add the latest projects and update the project descriptions."
+    },
+    {
+        "title": "Design Dashboard",
+        "status": "pending",
+        "description": "Finish the dashboard layout and responsive design."
+    },
+    {
+        "title": "Practice CSS",
+        "status": "completed",
+        "description": "Practice CSS concepts and improve responsive layouts."
+    },
+    {
+        "title": "Build SmartTask",
+        "status": "in-progress",
+        "description": "Continue building the SmartTask productivity dashboard."
+    }
+]
