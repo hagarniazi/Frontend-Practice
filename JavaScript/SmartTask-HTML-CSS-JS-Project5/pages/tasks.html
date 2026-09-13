@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tasks | SmartTask</title>
+
+    <link rel="stylesheet" href="../css/base/reset.css">
+    <link rel="stylesheet" href="../css/base/variables.css">
+    <link rel="stylesheet" href="../css/base/typography.css">
+
+    <link rel="stylesheet" href="../css/components/buttons.css">
+    <link rel="stylesheet" href="../css/components/navbar.css">
+    <link rel="stylesheet" href="../css/components/cards.css">
+    <link rel="stylesheet" href="../css/components/forms.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+
+    <link rel="stylesheet" href="../css/pages/tasks.css">
+
+    <link rel="stylesheet" href="../css/responsive/mobile.css">
+    <link rel="stylesheet" href="../css/responsive/tablet.css">
+    <link rel="stylesheet" href="../css/responsive/desktop.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="site-header">
+        <nav class="navbar">
+
+            <a href="../index.html" class="navbar-logo">
+                SmartTask
+            </a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+            <ul class="navbar-menu">
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html">Dashboard</a>
+                </li>
+
+                <li>
+                    <a href="tasks.html" class="active">Tasks</a>
+                </li>
+
+                <li>
+                    <a href="analytics.html">Analytics</a>
+                </li>
+
+                <li>
+                    <a href="ai-assistant.html">AI Assistant</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- Page Header -->
+        <section class="tasks-header">
+
+            <div>
+                <p class="section-label">TASK MANAGEMENT</p>
+
+                <h1>My Tasks</h1>
+
+                <p>
+                    Create, manage, and track your tasks in one place.
+                </p>
+            </div>
+
+            <button
+                type="button"
+                class="btn btn-primary"
+                id="open-task-form"
+            >
+                + Add New Task
+            </button>
+
+        </section>
+
+
+        <!-- Task Form -->
+        <section
+            class="task-form-section"
+            id="task-form-section"
+            hidden
+        >
+
+            <div class="section-heading">
+
+                <p class="section-label">NEW TASK</p>
+
+                <h2>Create Task</h2>
+
+            </div>
+
+
+            <form id="task-form">
+
+                <div class="form-group">
+
+                    <label for="task-title">
+                        Task Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="task-title"
+                        name="title"
+                        placeholder="Enter task title"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="task-description">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="task-description"
+                        name="description"
+                        placeholder="Enter task description"
+                        rows="4"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="task-status">
+                        Status
+                    </label>
+
+                    <select
+                        id="task-status"
+                        name="status"
+                    >
+
+                        <option value="pending">
+                            Pending
+                        </option>
+
+                        <option value="in-progress">
+                            In Progress
+                        </option>
+
+                        <option value="completed">
+                            Completed
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Add Task
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        id="cancel-task-form"
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- Tasks -->
+        <section class="tasks-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">YOUR TASKS</p>
+
+                <h2>All Tasks</h2>
+
+                <p>
+                    Manage your current tasks and track their progress.
+                </p>
+
+            </div>
+
+
+            <div
+                class="tasks-list"
+                id="tasks-list"
+            >
+                <!-- Tasks will be rendered by JavaScript -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <p>
+            © 2026 SmartTask. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="../js/components/navbar.js"></script>
+    <script src="../js/pages/tasks.js"></script>
+
+</body>
+</html>

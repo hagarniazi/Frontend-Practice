@@ -1,0 +1,224 @@
+/* SmartTask - Tasks Page */
+
+.tasks-header {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: var(--space-10) var(--space-5);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-6);
+}
+
+.tasks-header h1 {
+    margin-bottom: var(--space-3);
+}
+
+.tasks-header p {
+    margin: 0;
+}
+
+
+.task-form-section {
+    max-width: var(--container-max-width);
+    margin: 0 auto var(--space-8);
+    padding: var(--space-6);
+
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.tasks-section .section-heading {
+    margin-bottom: var(--space-6);
+}
+
+.task-form-section[hidden] {
+    display: none;
+}
+
+
+.form-group {
+    margin-bottom: var(--space-5);
+}
+
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--space-2);
+
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+}
+
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: var(--space-3);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+}
+
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: 2px solid var(--color-primary-light);
+    border-color: var(--color-primary);
+}
+
+
+.form-actions {
+    display: flex;
+    gap: var(--space-3);
+}
+
+
+.tasks-section {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-5) var(--space-10);
+}
+
+
+.tasks-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-5);
+}
+
+
+.task-card {
+    padding: var(--space-5);
+
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-sm);
+}
+
+
+.task-card h3 {
+    margin-bottom: var(--space-3);
+}
+
+
+.task-card p {
+    margin-bottom: var(--space-4);
+}
+
+
+.task-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-3);
+}
+
+
+.task-status {
+    display: inline-block;
+    padding: var(--space-1) var(--space-3);
+
+    border-radius: var(--radius-pill);
+
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-semibold);
+}
+
+
+.task-status-pending {
+    background-color: var(--color-warning-light);
+    color: var(--color-warning);
+}
+
+
+.task-status-progress {
+    background-color: var(--color-info-light);
+    color: var(--color-info);
+}
+
+
+.task-status-completed {
+    background-color: var(--color-success-light);
+    color: var(--color-success);
+}
+
+
+.task-actions {
+    display: flex;
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+}
+
+
+.task-actions button {
+    padding: var(--space-2) var(--space-3);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+
+    font-size: var(--font-size-body-small);
+}
+
+
+.task-actions button:hover {
+    border-color: var(--color-primary);
+}
+
+
+.delete-task {
+    color: var(--color-error) !important;
+}
+
+
+@media (max-width: 991px) {
+
+    .tasks-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .tasks-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tasks-header .btn {
+        width: 100%;
+    }
+
+    .tasks-list {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+    }
+
+}
