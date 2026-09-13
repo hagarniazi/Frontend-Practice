@@ -1,0 +1,552 @@
+/* SmartTask - About Page */
+
+
+/* Hero */
+
+.about-hero {
+
+    padding:
+        var(--space-11)
+        var(--space-5);
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--color-primary),
+            var(--color-secondary)
+        );
+
+}
+
+
+.about-hero-content {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+}
+
+
+.about-hero .section-label {
+
+    color:
+        var(--color-surface);
+
+    opacity: 0.85;
+
+}
+
+
+.about-hero h1 {
+
+    margin-bottom:
+        var(--space-5);
+
+    color:
+        var(--color-surface);
+
+    font-size:
+        var(--font-size-display);
+
+}
+
+
+.about-hero h1 span {
+
+    display: block;
+
+    color:
+        var(--color-accent);
+
+}
+
+
+.about-hero-description {
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color:
+        var(--color-surface);
+
+    opacity: 0.9;
+
+    font-size:
+        var(--font-size-body-large);
+
+}
+
+
+/* General Sections */
+
+.about-section,
+.goals-section,
+.features-section {
+
+    max-width:
+        var(--container-max-width);
+
+    margin: 0 auto;
+
+    padding:
+        var(--space-11)
+        var(--space-5);
+
+}
+
+
+.about-content {
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr;
+
+    gap:
+        var(--space-9);
+
+    align-items: center;
+
+}
+
+
+.about-text h2 {
+
+    margin-bottom:
+        var(--space-5);
+
+}
+
+
+.about-text p {
+
+    margin-bottom:
+        var(--space-4);
+
+}
+
+
+/* Highlight */
+
+.about-highlight {
+
+    padding:
+        var(--space-7);
+
+    text-align: center;
+
+    background:
+        var(--color-surface);
+
+    border:
+        1px solid var(--color-border);
+
+    border-radius:
+        var(--radius-xl);
+
+    box-shadow:
+        var(--shadow-lg);
+
+}
+
+
+.highlight-icon {
+
+    width: 64px;
+
+    height: 64px;
+
+    margin:
+        0 auto
+        var(--space-4);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius:
+        var(--radius-circle);
+
+    background:
+        var(--color-success-light);
+
+    color:
+        var(--color-success);
+
+    font-size:
+        28px;
+
+    font-weight:
+        var(--font-weight-bold);
+
+}
+
+
+.about-highlight h3 {
+
+    margin-bottom:
+        var(--space-3);
+
+}
+
+
+/* Section Heading */
+
+.section-heading {
+
+    max-width: 650px;
+
+    margin:
+        0 auto
+        var(--space-7);
+
+    text-align: center;
+
+}
+
+
+.section-heading h2 {
+
+    margin-bottom:
+        var(--space-3);
+
+}
+
+
+/* Goals */
+
+.goals-section {
+
+    background:
+        var(--color-surface-secondary);
+
+    max-width: none;
+
+}
+
+
+.goals-section .section-heading,
+.goals-grid {
+
+    max-width:
+        var(--container-max-width);
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+
+.goals-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        var(--space-5);
+
+}
+
+
+.goal-card {
+
+    padding:
+        var(--space-6);
+
+    background:
+        var(--color-surface);
+
+    border:
+        1px solid var(--color-border);
+
+    border-radius:
+        var(--radius-lg);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.goal-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        var(--shadow-lg);
+
+}
+
+
+.goal-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    margin-bottom:
+        var(--space-4);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius:
+        var(--radius-md);
+
+    background:
+        var(--color-info-light);
+
+    font-size: 22px;
+
+}
+
+
+.goal-card h3 {
+
+    margin-bottom:
+        var(--space-2);
+
+}
+
+
+/* Features */
+
+.features-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        var(--space-5);
+
+}
+
+
+.feature-card {
+
+    position: relative;
+
+    padding:
+        var(--space-6);
+
+    background:
+        var(--color-surface);
+
+    border:
+        1px solid var(--color-border);
+
+    border-radius:
+        var(--radius-lg);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.feature-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        var(--shadow-md);
+
+}
+
+
+.feature-number {
+
+    display: block;
+
+    margin-bottom:
+        var(--space-5);
+
+    color:
+        var(--color-primary);
+
+    font-size:
+        var(--font-size-body-small);
+
+    font-weight:
+        var(--font-weight-bold);
+
+}
+
+
+.feature-card h3 {
+
+    margin-bottom:
+        var(--space-3);
+
+}
+
+
+/* CTA */
+
+.about-cta {
+
+    max-width:
+        var(--container-max-width);
+
+    margin:
+        0 auto
+        var(--space-11);
+
+    padding:
+        var(--space-8);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap:
+        var(--space-5);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--color-primary),
+            var(--color-secondary)
+        );
+
+    border-radius:
+        var(--radius-xl);
+
+}
+
+
+.about-cta .section-label,
+.about-cta h2,
+.about-cta p {
+
+    color:
+        var(--color-surface);
+
+}
+
+
+.about-cta h2 {
+
+    margin-bottom:
+        var(--space-2);
+
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .about-hero h1 {
+
+        font-size:
+            var(--font-size-h1);
+
+    }
+
+
+    .about-content {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .goals-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .features-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .about-cta {
+
+        margin:
+            0
+            var(--space-4)
+            var(--space-8);
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .about-hero {
+
+        padding:
+            var(--space-9)
+            var(--space-4);
+
+    }
+
+
+    .about-section,
+    .goals-section,
+    .features-section {
+
+        padding:
+            var(--space-8)
+            var(--space-4);
+
+    }
+
+
+    .about-hero h1 {
+
+        font-size:
+            32px;
+
+    }
+
+
+    .about-hero-description {
+
+        font-size:
+            var(--font-size-body);
+
+    }
+
+
+    .about-highlight {
+
+        padding:
+            var(--space-5);
+
+    }
+
+}

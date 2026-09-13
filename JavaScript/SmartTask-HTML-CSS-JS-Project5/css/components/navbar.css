@@ -1,9 +1,11 @@
 /* SmartTask - Navbar */
 
+
 header {
     background-color: var(--color-surface);
     border-bottom: 1px solid var(--color-border);
 }
+
 
 nav {
     max-width: var(--container-max-width);
@@ -15,12 +17,14 @@ nav {
     justify-content: space-between;
 }
 
+
 .logo {
     font-family: var(--font-heading);
     font-size: var(--font-size-h3);
     font-weight: var(--font-weight-bold);
     color: var(--color-primary);
 }
+
 
 nav ul {
     display: flex;
@@ -29,6 +33,7 @@ nav ul {
     list-style: none;
 }
 
+
 nav ul a {
     color: var(--color-text-secondary);
     font-size: var(--font-size-body-small);
@@ -36,15 +41,18 @@ nav ul a {
     transition: color 0.2s ease;
 }
 
+
 nav ul a:hover {
     color: var(--color-primary);
 }
+
 
 nav ul a:focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 4px;
     border-radius: var(--radius-xs);
 }
+
 
 .menu-toggle {
     display: none;
@@ -54,8 +62,78 @@ nav ul a:focus-visible {
     font-size: 24px;
 }
 
+
 .menu-toggle:focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 4px;
     border-radius: var(--radius-xs);
+}
+
+
+/* Mobile Navigation */
+
+@media (max-width: 768px) {
+
+    nav {
+        position: relative;
+    }
+
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+    nav ul {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0;
+
+        padding:
+            var(--space-3)
+            var(--space-5);
+
+        background:
+            var(--color-surface);
+
+        border-bottom:
+            1px solid var(--color-border);
+
+        box-shadow:
+            var(--shadow-md);
+
+        z-index: 100;
+    }
+
+
+    nav ul.active {
+        display: flex;
+    }
+
+
+    nav ul li {
+        width: 100%;
+    }
+
+
+    nav ul a {
+        display: block;
+
+        width: 100%;
+
+        padding:
+            var(--space-3)
+            0;
+    }
+
 }

@@ -1,0 +1,376 @@
+/* SmartTask - Contact Page */
+
+
+/* Header */
+
+.contact-header {
+
+    max-width:
+        var(--container-max-width);
+
+    margin:
+        0 auto;
+
+    padding:
+        var(--space-10)
+        var(--space-5)
+        var(--space-7);
+
+    text-align:
+        center;
+
+}
+
+
+.contact-header h1 {
+
+    margin-bottom:
+        var(--space-3);
+
+}
+
+
+/* Contact Section */
+
+.contact-section {
+
+    max-width:
+        var(--container-max-width);
+
+    margin:
+        0 auto;
+
+    padding:
+        0
+        var(--space-5)
+        var(--space-11);
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1.2fr;
+
+    gap:
+        var(--space-9);
+
+    align-items:
+        start;
+
+}
+
+
+/* Contact Info */
+
+.contact-info {
+
+    padding-top:
+        var(--space-4);
+
+}
+
+
+.contact-info h2 {
+
+    margin-bottom:
+        var(--space-4);
+
+}
+
+
+.contact-info > p:not(.section-label) {
+
+    margin-bottom:
+        var(--space-7);
+
+}
+
+
+.contact-details {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        var(--space-5);
+
+}
+
+
+.contact-detail {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        var(--space-4);
+
+}
+
+
+.contact-icon {
+
+    flex-shrink:
+        0;
+
+    width:
+        52px;
+
+    height:
+        52px;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    border-radius:
+        var(--radius-md);
+
+    background:
+        var(--color-primary-light);
+
+    color:
+        var(--color-surface);
+
+    font-size:
+        22px;
+
+}
+
+
+.contact-detail h3 {
+
+    margin-bottom:
+        var(--space-1);
+
+    font-size:
+        var(--font-size-body);
+
+}
+
+
+.contact-detail p {
+
+    margin:
+        0;
+
+    font-size:
+        var(--font-size-body-small);
+
+}
+
+
+/* Form Card */
+
+.contact-form-card {
+
+    padding:
+        var(--space-7);
+
+    background:
+        var(--color-surface);
+
+    border:
+        1px solid var(--color-border);
+
+    border-radius:
+        var(--radius-xl);
+
+    box-shadow:
+        var(--shadow-lg);
+
+}
+
+
+.form-group {
+
+    margin-bottom:
+        var(--space-5);
+
+}
+
+
+.form-group label {
+
+    display:
+        block;
+
+    margin-bottom:
+        var(--space-2);
+
+    color:
+        var(--color-text-primary);
+
+    font-weight:
+        var(--font-weight-semibold);
+
+}
+
+
+.form-group input,
+.form-group textarea {
+
+    width:
+        100%;
+
+    padding:
+        var(--space-3)
+        var(--space-4);
+
+    border:
+        1px solid var(--color-border);
+
+    border-radius:
+        var(--radius-md);
+
+    background:
+        var(--color-background);
+
+    color:
+        var(--color-text-primary);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.form-group textarea {
+
+    resize:
+        vertical;
+
+    min-height:
+        140px;
+
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    outline:
+        none;
+
+    border-color:
+        var(--color-primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(99, 102, 241, 0.12);
+
+}
+
+
+/* Validation */
+
+.form-group.has-error input,
+.form-group.has-error textarea {
+
+    border-color:
+        var(--color-error);
+
+}
+
+
+.form-error {
+
+    display:
+        block;
+
+    min-height:
+        18px;
+
+    margin-top:
+        var(--space-1);
+
+    color:
+        var(--color-error);
+
+    font-size:
+        var(--font-size-caption);
+
+}
+
+
+.form-success {
+
+    margin-top:
+        var(--space-4);
+
+    color:
+        var(--color-success);
+
+    font-weight:
+        var(--font-weight-semibold);
+
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .contact-section {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            var(--space-7);
+
+    }
+
+
+    .contact-info {
+
+        padding-top:
+            0;
+
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .contact-header {
+
+        padding:
+            var(--space-8)
+            var(--space-4)
+            var(--space-6);
+
+    }
+
+
+    .contact-section {
+
+        padding:
+            0
+            var(--space-4)
+            var(--space-8);
+
+    }
+
+
+    .contact-form-card {
+
+        padding:
+            var(--space-5);
+
+    }
+
+}

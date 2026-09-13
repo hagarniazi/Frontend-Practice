@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Assistant | SmartTask</title>
+
+    <link rel="stylesheet" href="../css/base/reset.css">
+    <link rel="stylesheet" href="../css/base/variables.css">
+    <link rel="stylesheet" href="../css/base/typography.css">
+
+    <link rel="stylesheet" href="../css/components/navbar.css">
+    <link rel="stylesheet" href="../css/components/buttons.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+
+    <link rel="stylesheet" href="../css/pages/ai-assistant.css">
+
+</head>
+
+
+<body>
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a
+                href="../index.html"
+                class="navbar-logo"
+            >
+                SmartTask
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+
+            <ul class="navbar-menu">
+
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="tasks.html">
+                        Tasks
+                    </a>
+                </li>
+
+                <li>
+                    <a href="analytics.html">
+                        Analytics
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="ai-assistant.html"
+                        class="active"
+                    >
+                        AI Assistant
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- Header -->
+
+        <section class="assistant-header">
+
+            <p class="section-label">
+                SMARTTASK AI
+            </p>
+
+            <h1>
+                AI Productivity Assistant
+            </h1>
+
+            <p>
+                Ask questions about your tasks and productivity.
+            </p>
+
+        </section>
+
+
+        <!-- Assistant -->
+
+        <section class="assistant-section">
+
+
+            <div class="assistant-card">
+
+
+                <!-- Chat -->
+
+                <div
+                    class="chat-container"
+                    id="chat-container"
+                >
+
+                    <div class="message assistant-message">
+
+                        <div class="message-avatar">
+                            AI
+                        </div>
+
+                        <div class="message-content">
+
+                            <strong>
+                                SmartTask AI
+                            </strong>
+
+                            <p>
+                                Hi! 👋 I can help you understand
+                                your tasks and productivity.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Quick Actions -->
+
+                <div class="quick-actions">
+
+                    <p>
+                        Quick actions
+                    </p>
+
+
+                    <button
+                        type="button"
+                        class="quick-action"
+                        data-question="How many tasks do I have?"
+                    >
+                        📊 Show my tasks
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="quick-action"
+                        data-question="How many tasks are completed?"
+                    >
+                        ✅ Completed tasks
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="quick-action"
+                        data-question="How many tasks are in progress?"
+                    >
+                        🔄 In progress
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="quick-action"
+                        data-question="How many tasks are pending?"
+                    >
+                        ⏳ Pending tasks
+                    </button>
+
+                </div>
+
+
+                <!-- Input -->
+
+                <form
+                    class="chat-form"
+                    id="chat-form"
+                >
+
+                    <input
+                        type="text"
+                        id="chat-input"
+                        placeholder="Ask me about your tasks..."
+                        autocomplete="off"
+                        required
+                    >
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Send
+                    </button>
+
+                </form>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <p>
+            © 2026 SmartTask. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="../js/components/navbar.js"></script>
+    <script src="../js/pages/ai-assistant.js"></script>
+
+</body>
+
+</html>

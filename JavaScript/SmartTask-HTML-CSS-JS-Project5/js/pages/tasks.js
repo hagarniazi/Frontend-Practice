@@ -134,6 +134,21 @@ function createTaskElement(task, index) {
 
     });
 
+    const detailsButton = document.createElement("button");
+
+    detailsButton.type = "button";
+
+    detailsButton.textContent = "View Details";
+
+    detailsButton.addEventListener("click", function () {
+
+        window.location.href =
+            `task-details.html?id=${index}`;
+
+    });
+
+
+    taskActions.appendChild(detailsButton);
 
     taskActions.appendChild(completeButton);
 
