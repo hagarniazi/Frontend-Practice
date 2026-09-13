@@ -18,7 +18,8 @@ nav {
 }
 
 
-.logo {
+.logo,
+.navbar-logo {
     font-family: var(--font-heading);
     font-size: var(--font-size-h3);
     font-weight: var(--font-weight-bold);
@@ -67,6 +68,23 @@ nav ul a:focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 4px;
     border-radius: var(--radius-xs);
+}
+
+
+.theme-toggle {
+    border: none;
+    background: transparent;
+
+    padding: var(--space-2);
+
+    font-size: 20px;
+    line-height: 1;
+
+    color: var(--color-text-primary);
+}
+
+.theme-toggle:hover {
+    opacity: 0.7;
 }
 
 

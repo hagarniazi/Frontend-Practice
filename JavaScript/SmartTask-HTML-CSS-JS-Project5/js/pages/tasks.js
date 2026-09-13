@@ -17,34 +17,50 @@ const taskDescriptionInput = document.querySelector("#task-description");
 
 const taskStatusInput = document.querySelector("#task-status");
 
+const taskSearchInput = document.querySelector("#task-search-input");
+
 
 // Store tasks in memory
 let tasks = [];
 
+function searchTasks(searchTerm) {
+    const normalizedSearchTerm = searchTerm.toLowerCase().trim();
+
+    const filteredTasks = tasks.filter(function (task) {
+        return task.title.toLowerCase().includes(normalizedSearchTerm);
+    });
+
+    renderTasks(filteredTasks);
+}
 
 // Load tasks from JSON
+
 function loadTasks() {
+    const savedTasks = localStorage.getItem("smartTaskTasks");
+
+    if (savedTasks) {
+        tasks = JSON.parse(savedTasks);
+        renderTasks();
+        return;
+    }
 
     fetch("../data/tasks.json")
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-
             tasks = data;
 
-            renderTasks();
-
-        })
-        .catch(function (error) {
-
-            console.error(
-                "Failed to load tasks:",
-                error
+            localStorage.setItem(
+                "smartTaskTasks",
+                JSON.stringify(tasks)
             );
 
+            renderTasks();
+        })
+        .catch(function (error) {
+            console.error("Failed to load tasks:", error);
         });
-
 }
 
 
@@ -168,63 +184,61 @@ function createTaskElement(task, index) {
 
 
 // Display all tasks
-function renderTasks() {
-
+function renderTasks(tasksToRender = tasks) {
     tasksListElement.innerHTML = "";
 
+    tasksToRender.forEach(function (task) {
+        const originalIndex = tasks.indexOf(task);
 
-    tasks.forEach(function (task, index) {
-
-        const taskElement = createTaskElement(
-            task,
-            index
-        );
+        const taskElement = createTaskElement(task, originalIndex);
 
         tasksListElement.appendChild(taskElement);
-
     });
+}
 
+function debounce(callback, delay) {
+    let timeoutId;
+
+    return function (...args) {
+        clearTimeout(timeoutId);
+
+        timeoutId = setTimeout(function () {
+            callback(...args);
+        }, delay);
+    };
 }
 
 
 // Add new task
 function addTask(title, description, status) {
-
     const newTask = {
-
         title: title,
-
         description: description,
-
         status: status
-
     };
-
 
     tasks.push(newTask);
 
+    saveTasks();
     renderTasks();
-
 }
 
 
 // Update task status
 function updateTaskStatus(index, newStatus) {
-
     tasks[index].status = newStatus;
 
+    saveTasks();
     renderTasks();
-
 }
 
 
 // Delete task
 function deleteTask(index) {
-
     tasks.splice(index, 1);
 
+    saveTasks();
     renderTasks();
-
 }
 
 
@@ -285,6 +299,20 @@ taskForm.addEventListener(
     }
 );
 
+const debouncedSearch = debounce(function (searchTerm) {
+    searchTasks(searchTerm);
+}, 300);
+
+taskSearchInput.addEventListener("input", function () {
+    debouncedSearch(taskSearchInput.value);
+});
 
 // Start application
 loadTasks();
+
+function saveTasks() {
+    localStorage.setItem(
+        "smartTaskTasks",
+        JSON.stringify(tasks)
+    );
+}
