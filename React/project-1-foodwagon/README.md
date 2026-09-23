@@ -2,6 +2,10 @@
 
 A full-featured food delivery web app built with React, cloning the Foodwagon landing page design end-to-end — from static UI to real API data, search & filtering, cart, and mock authentication.
 
+## 🔗 Live Demo
+
+**[View Live Demo](https://frontend-practice-fyl4.vercel.app/)**
+
 ## 📸 Screenshots
 
 ### Desktop
@@ -19,9 +23,6 @@ A full-featured food delivery web app built with React, cloning the Foodwagon la
 ![Foodwagon Screenshot](./src/screenshots-preview/screenshot-8.png)
 ![Foodwagon Screenshot](./src/screenshots-preview/screenshot-9.png)
 
-## 🔗 Live Demo
-
-**[View Live Demo](https://frontend-practice-fyl4.vercel.app/)**
 
 ## ✨ Features
 
