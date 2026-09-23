@@ -1,0 +1,12 @@
+const restaurants = [
+  { image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80', discountBadge: '20% off', speedBadge: 'Fast', logo: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=160&q=80', name: 'Foodworld', rating: '46', status: 'open' },
+  { image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80', discountBadge: '15% off', speedBadge: 'Fast', logo: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=160&q=80', name: 'Pizzahub', rating: '40', status: 'tomorrow' },
+  { image: 'https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=800&q=80', discountBadge: '10% off', speedBadge: 'Fast', logo: 'https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=160&q=80', name: 'Donuts hut', rating: '20', status: 'open' },
+  { image: 'https://images.unsplash.com/photo-1553909489-cd47e0907980?auto=format&fit=crop&w=800&q=80', discountBadge: '25% off', speedBadge: 'Fast', logo: 'https://images.unsplash.com/photo-1553909489-cd47e0907980?auto=format&fit=crop&w=160&q=80', name: 'Ruby Tuesday', rating: '50', status: 'open' },
+  { image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80', discountBadge: '20% off', speedBadge: 'Fast', logo: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=160&q=80', name: 'Kuakata Fried Chicken', rating: '26', status: 'tomorrow' },
+  { image: 'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80', discountBadge: '15% off', speedBadge: 'Fast', logo: 'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=160&q=80', name: 'Red Square', rating: '34', status: 'open' },
+  { image: 'https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=800&q=80', discountBadge: '12% off', speedBadge: 'Fast', logo: 'https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=160&q=80', name: 'Taco Bell', rating: '30', status: 'open' },
+  { image: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80', discountBadge: '18% off', speedBadge: 'Fast', logo: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=160&q=80', name: 'Baba Can', rating: '36', status: 'tomorrow' },
+]
+
+export default restaurants
