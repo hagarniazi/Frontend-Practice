@@ -43,18 +43,6 @@ A full-featured food delivery web app built with React, cloning the Foodwagon la
 - **TheMealDB API** — real meal/food data
 - **localStorage** — cart & auth persistence
 
-## 📁 Project Structure
-
-src/
-├── components/ # Reusable UI components (Navbar, Cards, Buttons, etc.)
-├── pages/ # Route-level pages (Home, MealDetails, Order, Login, etc.)
-├── context/ # CartContext, AuthContext
-├── services/ # API call functions (mealApi.js)
-├── data/ # Static/mock data (cities, mock helpers)
-├── utils/ # Helper functions (mocked field generators)
-└── assets/ # Images & icons
-
-
 ## 🚀 Getting Started
 
 ```bash
