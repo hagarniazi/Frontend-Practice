@@ -1,28 +1,90 @@
-# Foodwagon Clone
+# 🍔 Foodwagon Clone
 
-A React recreation of the Foodwagon food delivery experience.
+A full-featured food delivery web app built with React, cloning the Foodwagon landing page design end-to-end — from static UI to real API data, search & filtering, cart, and mock authentication.
 
-## Tech stack
+## 📸 Screenshots
 
-- React 19 with Vite
-- React Router DOM
-- Tailwind CSS with PostCSS and Autoprefixer
-- ESLint
+### Desktop
 
-## Getting started
+![Foodwagon Screenshot](./src/screenshots-preview/screenshot-1.png)
+![Foodwagon Screenshot](./src/screenshots-preview/screenshot-2.png)
+![Foodwagon Screenshot](./src/screenshots-preview/screenshot-3.png)
+![Foodwagon Screenshot](./src/screenshots-preview/screenshot-4.png)
+![Foodwagon Screenshot](./src/screenshots-preview/screenshot-5.png)
+![Foodwagon Screenshot](./src/screenshots-preview/screenshot-6.png)
+
+### Mobile
+
+![Foodwagon Screenshot](./src/screenshots-preview/screenshot-7.png)
+![Foodwagon Screenshot](./src/screenshots-preview/screenshot-8.png)
+![Foodwagon Screenshot](./src/screenshots-preview/screenshot-9.png)
+
+## 🔗 Live Demo
+
+**[View Live Demo](https://frontend-practice-fyl4.vercel.app/)**
+
+## ✨ Features
+
+- Fully responsive, pixel-matched UI (mobile, tablet, desktop)
+- Real meal data fetched from [TheMealDB API](https://www.themealdb.com/api.php)
+- Search meals by name and filter by category
+- Meal details page with ingredients, instructions, and pricing
+- Shopping cart with add/remove/update quantity, persisted in localStorage
+- Mock authentication (Login / Signup / Logout) with protected UI state
+- Fully built-out footer pages (About, Team, Careers, Blog, Help, Legal, City pages)
+- Custom design system built with Tailwind CSS (colors, typography, spacing)
+
+## 🛠️ Tech Stack
+
+- **React** (Vite)
+- **React Router DOM** — client-side routing
+- **Tailwind CSS** — styling & design system
+- **Context API** — cart & auth state management
+- **TheMealDB API** — real meal/food data
+- **localStorage** — cart & auth persistence
+
+## 📁 Project Structure
+
+src/
+├── components/ # Reusable UI components (Navbar, Cards, Buttons, etc.)
+├── pages/ # Route-level pages (Home, MealDetails, Order, Login, etc.)
+├── context/ # CartContext, AuthContext
+├── services/ # API call functions (mealApi.js)
+├── data/ # Static/mock data (cities, mock helpers)
+├── utils/ # Helper functions (mocked field generators)
+└── assets/ # Images & icons
+
+
+## 🚀 Getting Started
 
 ```bash
+# Clone the repo
+git clone https://github.com/hagarniazi/Frontend-Practice.git
+
+# Navigate to the project
+cd Frontend-Practice/React/project-1-foodwagon
+
+# Install dependencies
 npm install
+
+# Run the development server
 npm run dev
 ```
 
-## Roadmap
+## 🗺️ Roadmap
 
-1. Project setup and foundation
-2. To be defined
-3. To be defined
-4. To be defined
-5. To be defined
-6. To be defined
-7. To be defined
-8. To be defined
+- [x] Project setup (Vite + React + Tailwind + Router)
+- [x] Reusable component library
+- [x] Static Home page assembly
+- [x] Real API integration (TheMealDB)
+- [x] Search & category filtering
+- [x] Meal details page & cart/order flow
+- [x] Responsiveness & polish
+- [x] Full interactivity (auth, footer pages)
+- [x] Deployment (GitHub + Live Demo)
+
+## 👩‍💻 Author
+
+**Hagar** — Front-End Developer
+[GitHub](https://github.com/hagarniazi)
+[LinkedIn](https://www.linkedin.com/in/hagar-khaled-niazi)
